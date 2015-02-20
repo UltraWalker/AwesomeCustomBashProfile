@@ -1,15 +1,18 @@
 # BASH Profile Related
-alias bpr='source ~/.bash_profile && clear'                             #BASH Profile Reset
-alias bpe='vim ~/.bash_profile'                                         #BASH Profile Edit
+alias bashprofile_reset='source ~/.bash_profile && clear'                             #BASH Profile Reset
+alias bashprofile_edit='vim ~/.bash_profile'                                         #BASH Profile Edit
 
-# Get Info
+# Get Info Like CPU,MEM,Storage
 alias cpuinfo='cat /proc/cpuinfo'
+alias storage='df -h'
+alias storages='du -sh * | sort'
+alias dush='du -sh'
 # some stuff for 'w' other procs 'last' ...
 
 # Directory & Listing Related
 alias c='clear'
-alias p='clear && pwd'
 alias go='cd'
+alias p='clear && pwd'
 alias bp='cd ../ && pwd && ls'
 alias cdu='cd -'
 alias cdb='cd ..'
@@ -46,11 +49,6 @@ alias pz='ps -aux | grep -i'
 alias mpz='ps aux | grep -i'                                       #for MAC
 alias signals='kill -l'
 
-# Storage Tools
-alias storage='df -h'
-alias storages='du -sh * | sort'
-alias dush='du -sh'
-
 # Grep Related
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -70,7 +68,7 @@ alias endof='tail'
 alias bak='cp filename{,.bak}'
 alias original='cp filename{,.original}'
 
-# Vim Style Slips
+# VIM Related
 export EDITOR='vim'
 alias edit='vim'
 alias vi='vim'
@@ -115,13 +113,11 @@ alias trc="sudo ./vendor/bin/codecept run --report --html --coverage"
 alias trco="trc && open ./tests/_log/coverage/index.html -a 'Google\ Chrome'"
 alias trfo="trf && open ./tests/_log/coverage/index.html -a 'Google\ Chrome'"
 alias s4="java -jar ~/bin/selenium-server-standalone-2.37.0.jar"
-# Laravel Cheats
 alias a="php artisan"
-alias art="a"
 alias artizan="a"
 alias phpcirb="~/Web/PHPCI/console && c && phpci phpci:run-builds -vvv"
 
-# 5.Git SCM Cheats
+# Git SCM Cheats
 alias g=git
 alias gi='git init'
 alias gs='clear && git status'
@@ -150,9 +146,6 @@ alias gdh2='git diff HEAD^^'
 alias gdh5='git diff HEAD~5'
 alias grh='git reset HEAD'              #unstage some files
 alias gco='git checkout'                #undo to last commit
-alias gcom='git checkout master'
-alias gcod='git checkout develop'
-alias gcob='git checkout -b'            #actually means both "branch y" & "checkout y"
 alias grsh='git reset --soft HEAD^'     #role back to stage!
 alias grhh='git reset --hard HEAD^'     #role back fully to last commit! //be careful
 alias gra='git remote add'
@@ -177,12 +170,17 @@ alias gbl='git blame --date short'
 alias gcl='git config --list'
 alias gitremoveallmergedbranches='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 
-# 6.Slips
-alias dc="cd"
-alias sl="ls"
-alias vm="mv"
-alias pc="cp"
-alias mr="rm"
+# Slips
+alias dc='cd'
+alias sl='ls'
+alias vm='mv'
+alias pc='cp'
+alias mr='rm'
+alias us='su'
+alias sp='ps'
+alias sl='ls'
+alias ud='du'
+alias fd='df'
 
 # Colorful BASH
 BLACK="\[\033[0;38m\]"
