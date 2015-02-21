@@ -89,10 +89,16 @@ alias hc='history -cw'
 alias s='sudo'
 alias ss='s !!'
 alias s!='s !!'
-alias scatter='s !!'
-alias bankai="sudo su"
-alias rootme="sudo su"
-alias godmode="sudo su"
+alias bankai='sudo su'
+alias rootme='sudo su'
+alias godmode='sudo su'
+alias llvim='^ll^sudo vim'
+alias nanovim='^nano^vim'
+alias vivim='^vi^vim'
+alias catvim='^cat^vim''
+alias v1='!! -v'
+alias v2='!! -vv'
+alias v3='!! -vvv'
 
 # Server Cheats
 alias html='cd /var/www/html/'
